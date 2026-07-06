@@ -479,11 +479,12 @@
     }
     .about-badge-float {
       position: absolute;
-      bottom: -20px; right: -20px;
+      bottom: 16px; right: 16px;
+      max-width: calc(100% - 32px);
       background: rgba(20,16,12,.95);
       border: 1px solid rgba(245,158,11,.25);
       border-radius: 14px;
-      padding: 16px 20px;
+      padding: 14px 18px;
       backdrop-filter: blur(20px);
       box-shadow: 0 10px 40px rgba(0,0,0,.5);
     }
@@ -511,7 +512,6 @@
 
     @media (max-width: 768px) {
       .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .about-badge-float { bottom: -16px; right: 16px; }
       .about { padding: 70px 0; }
     }
 
