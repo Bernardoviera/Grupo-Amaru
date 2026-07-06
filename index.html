@@ -456,6 +456,55 @@
       margin: 0;
     }
 
+    /* ── OFFERS ── */
+    .offers-section { padding: 100px 0; }
+    .offers-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+
+    .offer-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 40px 36px;
+      backdrop-filter: blur(20px);
+      transition: all .4s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .offer-card:hover { border-color: rgba(96,165,250,.3); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+
+    .offer-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, rgba(37,99,235,.3), rgba(129,140,248,.2));
+      border: 1px solid rgba(96,165,250,.2);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; margin-bottom: 20px;
+    }
+    .offer-tag {
+      display: inline-block;
+      background: rgba(37,99,235,.15);
+      border: 1px solid rgba(59,130,246,.3);
+      color: var(--accent);
+      font-size: .7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 6px;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+    .offer-card h3 { font-size: 1.4rem; font-weight: 800; letter-spacing: -.5px; margin-bottom: 12px; }
+    .offer-desc { font-size: .95rem; color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
+
+    .checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; flex-grow: 1; }
+    .checklist li { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: var(--muted); }
+    .checklist li::before { content: '✓'; color: var(--accent); font-weight: 700; font-size: .85rem; background: rgba(37,99,235,.15); width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+    .offer-cta { justify-content: center; width: 100%; }
+
+    @media (max-width: 768px) {
+      .offers-section { padding: 70px 0; }
+      .offer-card { padding: 32px 24px; }
+    }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -657,6 +706,53 @@
           <div id="psqSplitRightLines"></div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-divider"></div>
+
+  <!-- OFERTAS -->
+  <section class="offers-section" id="ofertas">
+    <div class="container">
+      <div class="section-header center reveal">
+        <div class="section-tag">[Tag da seção]</div>
+        <h2 class="section-title">Duas formas de trabalhar<br>com a gente</h2>
+        <p class="section-sub">[Subtítulo da seção — texto real vem da carta de apresentação.]</p>
+      </div>
+
+      <div class="offers-grid">
+        <div class="offer-card reveal">
+          <div class="offer-icon">📈</div>
+          <div class="offer-tag">Oferta 1</div>
+          <h3>Mentoria de Tráfego Pago</h3>
+          <p class="offer-desc">[Descrição curta da mentoria de tráfego pago — o que ela ensina e para quem é.]</p>
+          <ul class="checklist">
+            <li>[Benefício/módulo 1]</li>
+            <li>[Benefício/módulo 2]</li>
+            <li>[Benefício/módulo 3]</li>
+            <li>[Benefício/módulo 4]</li>
+          </ul>
+          <a class="btn-primary offer-cta" href="#" target="_blank" rel="noopener">
+            Quero essa mentoria
+          </a>
+        </div>
+
+        <div class="offer-card reveal reveal-delay-1">
+          <div class="offer-icon">🛠️</div>
+          <div class="offer-tag">Oferta 2</div>
+          <h3>Mentoria de Prestação de Serviço</h3>
+          <p class="offer-desc">[Descrição curta da mentoria de prestação de serviço — o que ela ensina e para quem é.]</p>
+          <ul class="checklist">
+            <li>[Benefício/módulo 1]</li>
+            <li>[Benefício/módulo 2]</li>
+            <li>[Benefício/módulo 3]</li>
+            <li>[Benefício/módulo 4]</li>
+          </ul>
+          <a class="btn-primary offer-cta" href="#" target="_blank" rel="noopener">
+            Quero essa mentoria
+          </a>
+        </div>
       </div>
     </div>
   </section>
