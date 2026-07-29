@@ -139,24 +139,18 @@
     .hero p.lead { margin-bottom: 36px; }
 
     .hero-photo {
-      aspect-ratio: 4/5;
-      border-radius: 28px;
-      border: 1px dashed rgba(37,211,102,.35);
-      background: linear-gradient(160deg, var(--surface), transparent);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 14px;
-      color: var(--muted);
-      text-align: center;
-      padding: 24px;
+      aspect-ratio: 1672/941;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,.5), 0 0 0 1px var(--border);
     }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 27px; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .placeholder-icon { width: 46px; height: 46px; stroke: var(--gold-deep); fill: none; stroke-width: 1.4; opacity: .8; }
     .placeholder-label { font-size: .8rem; letter-spacing: .5px; }
 
     @media (max-width: 860px) {
       .hero { padding: 140px 0 70px; }
       .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-      .hero-photo { max-width: 360px; margin: 0 auto; }
     }
 
     /* ── PROBLEMA ── */
@@ -352,8 +346,7 @@
           </a>
         </div>
         <div class="hero-photo reveal">
-          <svg class="placeholder-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          <span class="placeholder-label">Foto do Edson Amaru<br>(placeholder)</span>
+          <img src="metodo-hero.png" alt="Método AMARU — Venda Mais pelo WhatsApp" />
         </div>
       </div>
     </div>
