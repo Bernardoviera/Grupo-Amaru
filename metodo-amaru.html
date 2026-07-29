@@ -127,10 +127,9 @@
     .hero-photo {
       position: relative;
       width: 100%;
-      aspect-ratio: 1672/941;
-      overflow: hidden;
     }
-    .hero-photo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+    .hero-photo img { width: 100%; height: auto; display: block; }
+    .hero-photo .mobile-banner { display: none; }
 
     .hero-overlay {
       position: absolute;
@@ -155,7 +154,20 @@
 
     @media (max-width: 860px) {
       .hero { padding: 78px 0 0; }
-      .hero-overlay { width: 55%; }
+      .hero-photo .desktop-banner { display: none; }
+      .hero-photo .mobile-banner { display: block; }
+      /* no espaço vazio pra sobrepor no banner mobile (mockup ocupa quase tudo) — fica em fluxo normal abaixo */
+      .hero-overlay {
+        position: static;
+        width: auto;
+        max-width: 420px;
+        margin: 24px auto 0;
+        padding: 0 24px;
+        text-align: center;
+        background: none;
+      }
+      .hero-overlay .lead { font-size: .95rem; margin-bottom: 20px; }
+      .hero-overlay .btn-gold { padding: 14px 30px; font-size: .9rem; }
     }
 
     /* ── PROBLEMA ── */
@@ -268,17 +280,11 @@
     .receive-list .icon { stroke: var(--gold); }
 
     .mockup-box {
-      aspect-ratio: 4/3;
+      aspect-ratio: 1536/1024;
       border-radius: 24px;
-      border: 1px dashed rgba(37,211,102,.35);
-      background: linear-gradient(160deg, var(--surface), transparent);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      gap: 14px;
-      color: var(--muted);
-      text-align: center;
-      padding: 24px;
+      overflow: hidden;
     }
-    .mockup-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 23px; }
+    .mockup-box img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
     @media (max-width: 860px) {
       .receive-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -339,7 +345,8 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-photo reveal">
-      <img src="metodo-hero.png" alt="Método AMARU — Venda Mais pelo WhatsApp" />
+      <img class="desktop-banner" src="metodo-hero.png" alt="Método AMARU — Venda Mais pelo WhatsApp" />
+      <img class="mobile-banner" src="metodo-hero-mobile.png" alt="Método AMARU — Venda Mais pelo WhatsApp" />
       <div class="hero-overlay">
         <p class="lead">Aprenda um método prático para transformar conversas em vendas, conduzir atendimentos com mais estratégia e aumentar sua conversão no WhatsApp.</p>
         <a class="btn-gold" href="https://wa.me/5588988765563?text=Ol%C3%A1!%20Quero%20come%C3%A7ar%20agora%20com%20o%20M%C3%A9todo%20AMARU." target="_blank" rel="noopener">
@@ -488,8 +495,7 @@
           <li><svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg> Acesso pela plataforma</li>
         </ul>
         <div class="mockup-box reveal">
-          <svg class="placeholder-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path stroke-linecap="round" d="M8 21h8M12 17v4"/></svg>
-          <span class="placeholder-label">Mockup do curso<br>(placeholder)</span>
+          <img src="metodo-mockup.png" alt="Plataforma do Método AMARU" />
         </div>
       </div>
     </div>
