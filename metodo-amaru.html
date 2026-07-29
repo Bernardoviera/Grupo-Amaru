@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<!-- Fotos (Edson e mockup do curso) são placeholders — aguardando material do cliente -->
+<html lang="pt-BR">
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1005178078790238');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1005178078790238&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Método AMARU | Venda Mais pelo WhatsApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a09;
+      --bg2: #121110;
+      --surface: rgba(255,255,255,0.035);
+      --border: rgba(255,255,255,0.10);
+      --gold: #d4af37;
+      --gold-soft: #e8cd7a;
+      --gold-deep: #9c7a1e;
+      --text: #f5f1ea;
+      --muted: #9c9690;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .logo, .footer-logo, .step-card .step-num, .cta-final h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 18px 0;
+      background: rgba(10,10,9,0);
+      border-bottom: 1px solid transparent;
+      transition: background .3s ease, border-color .3s ease;
+    }
+    nav.scrolled {
+      background: rgba(10,10,9,.92);
+      backdrop-filter: blur(16px);
+      border-bottom-color: var(--border);
+    }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.15rem; letter-spacing: -.3px; }
+    .logo span { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: #17140a;
+      border: none; cursor: pointer;
+      padding: 10px 20px; border-radius: 100px;
+      font-family: 'Inter', sans-serif; font-weight: 700; font-size: .85rem;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212,175,55,.35); }
+
+    /* ── SHARED ── */
+    section { padding: 110px 0; position: relative; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .eyebrow::before { content: ''; width: 18px; height: 1px; background: var(--gold); }
+    h2.title {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      letter-spacing: -1px; line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .lead { font-size: 1.05rem; color: var(--muted); max-width: 620px; }
+
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold) 60%, var(--gold-deep));
+      color: #1a1509;
+      border: none; cursor: pointer;
+      padding: 18px 36px; border-radius: 100px;
+      font-family: 'Inter', sans-serif; font-weight: 800; font-size: 1rem;
+      letter-spacing: .3px;
+      text-decoration: none;
+      transition: transform .25s ease, box-shadow .25s ease;
+      box-shadow: 0 10px 30px rgba(212,175,55,.25);
+    }
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(212,175,55,.4); }
+
+    .icon { width: 22px; height: 22px; flex-shrink: 0; stroke: var(--gold); fill: none; stroke-width: 1.8; }
+
+    /* ── REVEAL (minimal, one style, no elaborate motion) ── */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── HERO ── */
+    .hero { padding: 170px 0 110px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      letter-spacing: -1.5px; line-height: 1.08;
+      margin-bottom: 22px;
+    }
+    .hero h1 .line2 { display: block; color: var(--gold); }
+    .hero p.lead { margin-bottom: 36px; }
+
+    .hero-photo {
+      aspect-ratio: 4/5;
+      border-radius: 28px;
+      border: 1px dashed rgba(212,175,55,.35);
+      background: linear-gradient(160deg, var(--surface), transparent);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 14px;
+      color: var(--muted);
+      text-align: center;
+      padding: 24px;
+    }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 27px; }
+    .placeholder-icon { width: 46px; height: 46px; stroke: var(--gold-deep); fill: none; stroke-width: 1.4; opacity: .8; }
+    .placeholder-label { font-size: .8rem; letter-spacing: .5px; }
+
+    @media (max-width: 860px) {
+      .hero { padding: 140px 0 70px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-photo { max-width: 360px; margin: 0 auto; }
+    }
+
+    /* ── PROBLEMA ── */
+    .problem-list { list-style: none; display: flex; flex-direction: column; gap: 18px; margin: 40px 0 40px; max-width: 640px; }
+    .problem-list li {
+      display: flex; align-items: flex-start; gap: 14px;
+      font-size: 1.05rem; color: var(--text);
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .problem-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .problem-list .icon { stroke: #b0483f; margin-top: 3px; }
+
+    .highlight-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 16px;
+      padding: 28px 32px;
+      max-width: 640px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      line-height: 1.5;
+    }
+    .highlight-box span { color: var(--gold); }
+
+    /* ── MÉTODO ── */
+    .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .step-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 30px 26px;
+      transition: border-color .25s ease, transform .25s ease;
+    }
+    .step-card:hover { border-color: rgba(212,175,55,.4); transform: translateY(-4px); }
+    .step-card .step-num {
+      font-size: 2.1rem;
+      color: var(--gold);
+      opacity: .55;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .step-card p { font-size: 1.05rem; font-weight: 600; color: var(--text); }
+
+    @media (max-width: 860px) {
+      .method-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 520px) {
+      .method-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── PARA QUEM ── */
+    .audience-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .audience-item {
+      display: flex; align-items: center; gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      font-weight: 600;
+      font-size: .95rem;
+    }
+    .audience-item .icon { width: 18px; height: 18px; stroke: var(--gold); }
+
+    @media (max-width: 860px) { .audience-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .audience-grid { grid-template-columns: 1fr; } }
+
+    /* ── SOBRE O PROFESSOR ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .about-photo {
+      aspect-ratio: 4/5;
+      border-radius: 28px;
+      border: 1px dashed rgba(212,175,55,.35);
+      background: linear-gradient(160deg, var(--surface), transparent);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 14px;
+      color: var(--muted);
+      text-align: center;
+      padding: 24px;
+    }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 27px; }
+    .about-content h3 { font-size: 1.7rem; margin-bottom: 6px; }
+    .about-role { color: var(--gold); font-weight: 600; font-size: .95rem; margin-bottom: 20px; }
+    .about-content p { color: var(--muted); font-size: 1rem; margin-bottom: 16px; }
+
+    @media (max-width: 860px) {
+      .about-grid { grid-template-columns: 1fr; gap: 36px; }
+      .about-photo { max-width: 320px; margin: 0 auto; }
+    }
+
+    /* ── O QUE VOCÊ RECEBE ── */
+    .receive-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .receive-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .receive-list li {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 1.05rem; font-weight: 600;
+    }
+    .receive-list .icon { stroke: var(--gold); }
+
+    .mockup-box {
+      aspect-ratio: 4/3;
+      border-radius: 24px;
+      border: 1px dashed rgba(212,175,55,.35);
+      background: linear-gradient(160deg, var(--surface), transparent);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 14px;
+      color: var(--muted);
+      text-align: center;
+      padding: 24px;
+    }
+    .mockup-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 23px; }
+
+    @media (max-width: 860px) {
+      .receive-grid { grid-template-columns: 1fr; gap: 36px; }
+      .receive-list { order: 2; }
+      .mockup-box { order: 1; max-width: 420px; margin: 0 auto; }
+    }
+
+    /* ── CTA FINAL ── */
+    .cta-final {
+      text-align: center;
+      background: radial-gradient(ellipse at center, rgba(212,175,55,.08), transparent 70%);
+    }
+    .cta-final h2 {
+      font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+      letter-spacing: -.5px;
+      max-width: 720px;
+      margin: 0 auto 18px;
+      line-height: 1.3;
+    }
+    .cta-final .sub {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 40px;
+    }
+    .cta-final .sub strong { color: var(--text); font-weight: 700; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    .footer-logo { font-size: 1rem; margin-bottom: 10px; }
+    .footer-logo span { color: var(--gold); }
+    footer a { color: var(--muted); }
+
+    @media (max-width: 640px) {
+      section { padding: 70px 0; }
+      .hero { padding: 120px 0 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="logo">Método<span>AMARU</span></div>
+        <a class="nav-cta" href="https://wa.me/5588988765563?text=Ol%C3%A1!%20Quero%20come%C3%A7ar%20agora%20com%20o%20M%C3%A9todo%20AMARU." target="_blank" rel="noopener">Quero começar</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="reveal">
+          <h1>
+            Método AMARU
+            <span class="line2">Venda Mais pelo WhatsApp</span>
+          </h1>
+          <p class="lead">Aprenda um método prático para transformar conversas em vendas, conduzir atendimentos com mais estratégia e aumentar sua conversão no WhatsApp.</p>
+          <a class="btn-gold" href="https://wa.me/5588988765563?text=Ol%C3%A1!%20Quero%20come%C3%A7ar%20agora%20com%20o%20M%C3%A9todo%20AMARU." target="_blank" rel="noopener">
+            QUERO COMEÇAR AGORA
+          </a>
+        </div>
+        <div class="hero-photo reveal">
+          <svg class="placeholder-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="placeholder-label">Foto do Edson Amaru<br>(placeholder)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O PROBLEMA -->
+  <section class="problem">
+    <div class="container">
+      <div class="eyebrow">O problema</div>
+      <h2 class="title">Você já passou por isso?</h2>
+
+      <ul class="problem-list reveal">
+        <li>
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="m9 9 6 6m0-6-6 6"/></svg>
+          O cliente pede o preço e desaparece.
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="m9 9 6 6m0-6-6 6"/></svg>
+          Diz que vai pensar e nunca mais responde.
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="m9 9 6 6m0-6-6 6"/></svg>
+          Seu atendimento vira apenas um tira-dúvidas.
+        </li>
+        <li>
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="m9 9 6 6m0-6-6 6"/></svg>
+          Você sente que perde vendas sem entender o motivo.
+        </li>
+      </ul>
+
+      <div class="highlight-box reveal">
+        O problema não é o WhatsApp. <span>É a forma como a conversa está sendo conduzida.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- O MÉTODO -->
+  <section class="method">
+    <div class="container">
+      <div class="eyebrow">O método</div>
+      <h2 class="title">O que você vai aprender</h2>
+
+      <div class="method-grid">
+        <div class="step-card reveal">
+          <span class="step-num">01</span>
+          <p>Quebrar o gelo</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-num">02</span>
+          <p>Descobrir a necessidade</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-num">03</span>
+          <p>Criar conexão</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-num">04</span>
+          <p>Gerar valor</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-num">05</span>
+          <p>Apresentar a oferta</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-num">06</span>
+          <p>Conduzir o fechamento</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM É -->
+  <section class="audience">
+    <div class="container">
+      <div class="eyebrow">Para quem é</div>
+      <h2 class="title">Este treinamento é para quem vende pelo WhatsApp.</h2>
+
+      <div class="audience-grid">
+        <div class="audience-item reveal">
+          <svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg>
+          Lojas
+        </div>
+        <div class="audience-item reveal">
+          <svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg>
+          Clínicas
+        </div>
+        <div class="audience-item reveal">
+          <svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg>
+          Corretores
+        </div>
+        <div class="audience-item reveal">
+          <svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg>
+          Consultores
+        </div>
+        <div class="audience-item reveal">
+          <svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg>
+          Empresas
+        </div>
+        <div class="audience-item reveal">
+          <svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg>
+          Prestadores de serviço
+        </div>
+        <div class="audience-item reveal">
+          <svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg>
+          Equipes comerciais
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE O PROFESSOR -->
+  <section class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo reveal">
+          <svg class="placeholder-icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="placeholder-label">Foto do Edson Amaru<br>(placeholder)</span>
+        </div>
+        <div class="about-content reveal">
+          <div class="eyebrow">Quem ensina</div>
+          <h3>Edson Amaru</h3>
+          <div class="about-role">Gestor de Tráfego · Estrategista de Marketing · Especialista em Estruturação Comercial</div>
+          <p>Nos últimos anos ajudou empresas de diferentes segmentos a transformar marketing em vendas através de processos simples e aplicáveis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE VOCÊ RECEBE -->
+  <section class="receive">
+    <div class="container">
+      <div class="eyebrow">O que você recebe</div>
+      <h2 class="title">Tudo pra aplicar ainda hoje</h2>
+
+      <div class="receive-grid">
+        <ul class="receive-list reveal">
+          <li><svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg> Acesso imediato</li>
+          <li><svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg> Método completo</li>
+          <li><svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg> Teste DISC</li>
+          <li><svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg> Material de apoio</li>
+          <li><svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg> Aulas objetivas</li>
+          <li><svg class="icon" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></svg> Acesso pela plataforma</li>
+        </ul>
+        <div class="mockup-box reveal">
+          <svg class="placeholder-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path stroke-linecap="round" d="M8 21h8M12 17v4"/></svg>
+          <span class="placeholder-label">Mockup do curso<br>(placeholder)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <div class="container">
+      <div class="eyebrow" style="justify-content:center;">Chegou a hora</div>
+      <h2 class="reveal">Está na hora de vender com mais estratégia.</h2>
+      <p class="sub reveal"><strong>Venda não é responder mensagens.</strong><br>Venda é conduzir decisões.</p>
+      <a class="btn-gold reveal" href="https://wa.me/5588988765563?text=Ol%C3%A1!%20Quero%20o%20M%C3%A9todo%20AMARU." target="_blank" rel="noopener">
+        QUERO O MÉTODO AMARU
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Método<span>AMARU</span></div>
+      <p>© 2026 · Edson Amaru · Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
