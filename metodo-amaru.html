@@ -123,13 +123,13 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* ── HERO ── */
-    .hero { padding: 170px 0 110px; }
+    .hero { padding: 150px 0 0; }
     .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 56px;
-      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
     }
+    .hero-text { max-width: 720px; }
     .hero h1 {
       font-size: clamp(2.2rem, 5vw, 3.6rem);
       letter-spacing: -1.5px; line-height: 1.08;
@@ -139,18 +139,16 @@
     .hero p.lead { margin-bottom: 36px; }
 
     .hero-photo {
+      width: 100%;
       aspect-ratio: 1672/941;
-      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 30px 80px rgba(0,0,0,.5), 0 0 0 1px var(--border);
     }
-    .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: contain; display: block; }
     .placeholder-icon { width: 46px; height: 46px; stroke: var(--gold-deep); fill: none; stroke-width: 1.4; opacity: .8; }
     .placeholder-label { font-size: .8rem; letter-spacing: .5px; }
 
     @media (max-width: 860px) {
-      .hero { padding: 140px 0 70px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero { padding: 130px 0 0; }
     }
 
     /* ── PROBLEMA ── */
@@ -333,9 +331,9 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="reveal">
+    <div class="hero-grid">
+      <div class="container">
+        <div class="hero-text reveal">
           <h1>
             Método AMARU
             <span class="line2">Venda Mais pelo WhatsApp</span>
@@ -345,9 +343,9 @@
             QUERO COMEÇAR AGORA
           </a>
         </div>
-        <div class="hero-photo reveal">
-          <img src="metodo-hero.png" alt="Método AMARU — Venda Mais pelo WhatsApp" />
-        </div>
+      </div>
+      <div class="hero-photo reveal">
+        <img src="metodo-hero.png" alt="Método AMARU — Venda Mais pelo WhatsApp" />
       </div>
     </div>
   </section>
