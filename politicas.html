@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- Conteúdo padrão/gerado — recomenda-se revisão por um advogado antes de publicar em produção -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Políticas | Amaru</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0a09;
+      --bg2: #121110;
+      --surface: rgba(255,255,255,0.035);
+      --border: rgba(255,255,255,0.10);
+      --accent: #9ca3af;
+      --text: #f5f1ea;
+      --muted: #9c9690;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    h1, h2, .logo, .footer-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+
+    .container { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,10,9,.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.05rem; }
+    .logo span { color: var(--accent); }
+    .back-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .85rem; font-weight: 600;
+      transition: color .2s ease;
+    }
+    .back-link:hover { color: var(--text); }
+    .back-link svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    /* ── HERO ── */
+    .page-header { padding: 64px 0 40px; border-bottom: 1px solid var(--border); }
+    .page-header .eyebrow {
+      font-size: .75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 14px;
+    }
+    .page-header h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); letter-spacing: -.5px; margin-bottom: 10px; }
+    .page-header p { color: var(--muted); font-size: .95rem; }
+
+    /* ── TOC ── */
+    .toc {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .toc a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .82rem; font-weight: 600;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 7px 16px;
+      transition: all .2s ease;
+    }
+    .toc a:hover { color: var(--text); border-color: rgba(156,163,175,.4); }
+
+    /* ── CONTENT ── */
+    .policy { padding: 56px 0; border-bottom: 1px solid var(--border); }
+    .policy:last-of-type { border-bottom: none; }
+    .policy h2 {
+      font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+      letter-spacing: -.3px;
+      margin-bottom: 24px;
+      scroll-margin-top: 90px;
+    }
+    .policy h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.02rem; font-weight: 700;
+      margin: 28px 0 10px;
+      color: var(--text);
+    }
+    .policy p { color: var(--muted); font-size: .95rem; margin-bottom: 14px; }
+    .policy ul { color: var(--muted); font-size: .95rem; margin: 0 0 14px 20px; display: flex; flex-direction: column; gap: 8px; }
+    .policy strong { color: var(--text); font-weight: 600; }
+    .updated { font-size: .82rem; color: var(--muted); opacity: .7; margin-top: 8px; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    .footer-logo { font-size: 1rem; margin-bottom: 10px; }
+    .footer-logo span { color: var(--accent); }
+
+    @media (max-width: 640px) {
+      .page-header { padding: 48px 0 32px; }
+      .policy { padding: 40px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <div class="logo">Grupo<span>Amaru</span></div>
+        <a class="back-link" href="index.html">
+          <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          Voltar
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <div class="eyebrow">Documentos legais</div>
+      <h1>Políticas</h1>
+      <p>Política de Privacidade, Termos de Uso e Política de Reembolso do Grupo Amaru e do Método AMARU.</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="toc" aria-label="Índice">
+      <a href="#privacidade">Privacidade</a>
+      <a href="#termos">Termos de Uso</a>
+      <a href="#reembolso">Reembolso</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+
+  <main class="container">
+
+    <section class="policy" id="privacidade">
+      <h2>Política de Privacidade</h2>
+
+      <p>Esta Política de Privacidade explica como coletamos, usamos, armazenamos e protegemos as informações de quem visita nossas páginas ou contrata nossos produtos e serviços (mentorias e o Método AMARU), em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+
+      <h3>Quais dados coletamos</h3>
+      <ul>
+        <li>Dados de contato fornecidos por você, como nome, e-mail e número de WhatsApp;</li>
+        <li>Dados de navegação (páginas visitadas, tempo de permanência, origem do acesso) coletados por meio de cookies e pixels de rastreamento (incluindo o Meta Pixel, usado para anúncios no Facebook e Instagram);</li>
+        <li>Dados de pagamento, quando você realiza uma compra — esses dados são processados diretamente pela plataforma de pagamento parceira (Kiwify) e não ficam armazenados em nossos servidores.</li>
+      </ul>
+
+      <h3>Como usamos esses dados</h3>
+      <ul>
+        <li>Para entrar em contato sobre nossos produtos e serviços;</li>
+        <li>Para processar e entregar compras realizadas;</li>
+        <li>Para melhorar nossas páginas e campanhas de anúncio;</li>
+        <li>Para cumprir obrigações legais e fiscais.</li>
+      </ul>
+
+      <h3>Compartilhamento com terceiros</h3>
+      <p>Compartilhamos dados apenas com parceiros necessários pra operação do negócio, como a plataforma de pagamento (Kiwify) e ferramentas de anúncio (Meta/Facebook). Não vendemos seus dados a terceiros.</p>
+
+      <h3>Seus direitos</h3>
+      <p>Você pode, a qualquer momento, solicitar acesso, correção, portabilidade ou exclusão dos seus dados pessoais, entrando em contato pelos canais informados na seção "Contato" abaixo.</p>
+
+      <h3>Cookies</h3>
+      <p>Usamos cookies e pixels de rastreamento para entender como você usa nossas páginas e para exibir anúncios mais relevantes. Você pode desativar cookies nas configurações do seu navegador a qualquer momento.</p>
+
+      <p class="updated">Última atualização: 2026.</p>
+    </section>
+
+    <section class="policy" id="termos">
+      <h2>Termos de Uso</h2>
+
+      <p>Ao acessar nossas páginas ou contratar nossos produtos e serviços, você concorda com os termos descritos abaixo.</p>
+
+      <h3>Sobre os produtos e serviços</h3>
+      <p>Oferecemos mentorias de tráfego pago, consultoria comercial e treinamento de atendimento (Grupo Amaru), além de cursos digitais como o Método AMARU. O conteúdo é entregue conforme descrito na página de vendas de cada produto no momento da compra.</p>
+
+      <h3>Propriedade intelectual</h3>
+      <p>Todo o conteúdo disponibilizado — aulas, materiais de apoio, roteiros, planilhas e demais arquivos — é de uso pessoal e intransferível. É proibida a reprodução, cópia, distribuição ou revenda do material sem autorização expressa.</p>
+
+      <h3>Resultados</h3>
+      <p>Os exemplos de resultados apresentados em nossas páginas referem-se a casos reais de clientes específicos, dentro do contexto e investimento de cada um. Não garantimos resultados financeiros iguais ou específicos para todos os alunos e clientes, já que isso depende de fatores fora do nosso controle (mercado, execução, investimento, nicho, entre outros).</p>
+
+      <h3>Responsabilidades do usuário</h3>
+      <p>Você é responsável por fornecer informações verdadeiras no momento da compra e por manter a confidencialidade de eventuais acessos e senhas relacionados aos produtos adquiridos.</p>
+
+      <h3>Alterações</h3>
+      <p>Podemos atualizar estes termos periodicamente. A versão vigente é sempre a publicada nesta página.</p>
+
+      <p class="updated">Última atualização: 2026.</p>
+    </section>
+
+    <section class="policy" id="reembolso">
+      <h2>Política de Reembolso</h2>
+
+      <h3>Direito de arrependimento (garantia de 7 dias)</h3>
+      <p>Conforme o Art. 49 do Código de Defesa do Consumidor, compras realizadas fora de estabelecimento comercial (incluindo a internet) podem ser canceladas em até <strong>7 dias corridos</strong> a partir da data da compra, com devolução integral do valor pago.</p>
+
+      <h3>Como solicitar</h3>
+      <p>Pra solicitar o reembolso dentro do prazo, entre em contato pelos canais informados na seção "Contato" abaixo, informando o e-mail usado na compra e o motivo da solicitação. Compras feitas via Kiwify também podem ser reembolsadas diretamente pela própria plataforma, seguindo as políticas dela.</p>
+
+      <h3>Prazo de processamento</h3>
+      <p>Após a confirmação, o reembolso é processado em até 7 dias úteis, respeitando os prazos do meio de pagamento utilizado (cartão de crédito pode levar mais tempo pra refletir na fatura).</p>
+
+      <h3>Após o prazo de 7 dias</h3>
+      <p>Solicitações feitas após o prazo de arrependimento serão avaliadas caso a caso, sem garantia de reembolso.</p>
+
+      <p class="updated">Última atualização: 2026.</p>
+    </section>
+
+    <section class="policy" id="contato">
+      <h2>Contato</h2>
+      <p>Pra dúvidas sobre estas políticas, exercer seus direitos como titular de dados ou solicitar reembolso, fale com a gente pelo WhatsApp: <strong>(88) 98876-5563</strong>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-logo">Grupo<span>Amaru</span></div>
+      <p>© 2026 · Grupo Amaru · Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

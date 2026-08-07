@@ -813,6 +813,16 @@
     }
     .footer-logo { font-size: 1.1rem; margin-bottom: 12px; }
     .footer-logo span { color: var(--accent); }
+    .footer-policies-link {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--muted);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-size: .8rem;
+      transition: color .2s ease;
+    }
+    .footer-policies-link:hover { color: var(--accent); }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeInUp {
@@ -1395,6 +1405,7 @@
     <div class="container">
       <div class="footer-logo">Grupo<span>Amaru</span></div>
       <p>© 2026 · Grupo Amaru · Todos os direitos reservados.</p>
+      <a href="politicas.html" class="footer-policies-link">Políticas de Privacidade, Termos e Reembolso</a>
     </div>
   </footer>
 
